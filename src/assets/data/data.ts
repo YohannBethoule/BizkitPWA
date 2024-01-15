@@ -1,4 +1,6 @@
-export const bosses = [
+import { Boss } from '../types/Boss.ts'
+
+export const allBosses: Boss[] = [
     {
         "name": "L'arbitre",
         "surname": "",
@@ -11,7 +13,7 @@ export const bosses = [
         "enrageHandler": "callback",
         "enrageLabel": "Si un joueur n'a pas fini de boire toutes ses gorgées avant le début de son tour, l'arbitre n'accorde plus de remise de peine. Toutes les gorgées doivent désormais être bues d'une traite.",
         "isEnraged": "false",
-        "imageSource": require('../images/cards/arbitre.webp')
+        "imageSource": '../assets/images/cards/arbitre.webp'
     },
     {
         "name": "Le modéré",
@@ -25,7 +27,7 @@ export const bosses = [
         "enrageHandler": "callback",
         "enrageLabel": "Libère tous les rôles si le poulet boit sur 10 lancées d'affilée.",
         "isEnraged": "false",
-        "imageSource": require('../images/cards/modere.webp')
+        "imageSource": '../assets/images/cards/modere.webp'
     },
     {
         "name": "Les jumeaux",
@@ -39,7 +41,7 @@ export const bosses = [
         "enrageHandler": "callback",
         "enrageLabel": "Si 3 lancers identiques s'enchainent, le nombre de gorgées du pouvoir est doublé.",
         "isEnraged": "false",
-        "imageSource": require('../images/cards/jumeaux.webp')
+        "imageSource": '../assets/images/cards/jumeaux.webp'
     },
     {
         "name": "Les 5 doigts de la main",
@@ -53,7 +55,7 @@ export const bosses = [
         "enrageHandler": "callback",
         "enrageLabel": "Quand un lancé fait un double 5, tous les joueurs boivent 5 gorgées.",
         "isEnraged": "false",
-        "imageSource": require('../images/cards/main.webp')
+        "imageSource": '../assets/images/cards/main.webp'
     },
     {
         "name": "Le poulet",
@@ -67,7 +69,7 @@ export const bosses = [
         "enrageHandler": "callback",
         "enrageLabel": "Si il y a un double poulet et qu'un lancé fait double 3, c'est le double poulet qui peut distribuer 3 gorgées à la place du joueur qui a lancé.",
         "isEnraged": "false",
-        "imageSource": require('../images/cards/poulet.webp')
+        "imageSource": '../assets/images/cards/poulet.webp'
     },
     {
         "name": "La catin",
@@ -82,7 +84,7 @@ export const bosses = [
         "enrageLabel": "Quand un lancé fait 4 + 1, le tour du joueur suivant est sauté.",
         "isEnraged": "false",
         "passive": "La catin perd 1 PV chaque fois que le poulet boit",
-        "imageSource": require('../images/cards/catin.webp')
+        "imageSource": '../assets/images/cards/catin.webp'
     },
     {
         "name": "Le gambit",
@@ -96,7 +98,7 @@ export const bosses = [
         "enrageHandler": "callback",
         "enrageLabel": "Si le Gambit meurt avec un nombre de PV exactement égal à 0, tous les joueurs boivent un cul sec.",
         "isEnraged": "false",
-        "imageSource": require('../images/cards/gambit.webp')
+        "imageSource": '../assets/images/cards/gambit.webp'
     },
     {
         "name": "Shenbizkit",
@@ -111,6 +113,6 @@ export const bosses = [
         "enrageLabel": "Tous les 7 Bizkits, Shenbizkit lance 7 dés et répartie le total en gorgées à boire entre tous les joueurs.",
         "isEnraged": "false",
         "passive": "Shenkizkit gagne 7 PV par Bizkit.",
-        "imageSource": require('../images/cards/shenbizkit.webp')
+        "imageSource": '../assets/images/cards/shenbizkit.webp'
     }
 ]
