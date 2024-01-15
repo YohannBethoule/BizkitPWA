@@ -1,31 +1,25 @@
 <script setup lang="ts">
-import {onBeforeMount, ref, watch} from "vue";
+import {ref, watch} from "vue";
 import DiceStack from "@/components/DiceStack.vue";
+import {Boss} from "@/types/Boss.ts";
 const { boss, dies } = defineProps<{
     boss: Boss,
-    dies: Function
+    dies: Function,
+    image: string
 }>()
 
 const hp = ref(boss.hp)
-const bossImage = ref('')
 
 watch(hp, (newHP) => {
     if (newHP <= 0) {
         dies();
     }
 });
-
-onBeforeMount(async () => {
-    if (boss.imageSource) {
-        const imageModule = await import(boss.imageSource);
-        bossImage.value = imageModule.default;
-    }
-});
 </script>
 
 <template>
     <article class="card">
-        <img :src="bossImage" :alt="boss.name" />
+        <img :src="image" alt="boss.name">
         <p class="ap">{{boss.ap}}</p>
         <p class="hp">{{hp}}</p>
         <button class="hp-btn increment" @click="hp++"></button>

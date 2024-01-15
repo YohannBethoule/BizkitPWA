@@ -61,7 +61,7 @@ const dicesData = [
     },
 ]
 
-const getValueName = (value) => {
+const getValueName = (value: number) => {
     let name = "dice-";
     switch (value) {
         case 1:
@@ -93,9 +93,9 @@ const rollDices = () => {
     dicesSum.value = dices.value.map((item) => item.value).reduce((previousState, currentState) => previousState + currentState);
 }
 
-let interval;
+let interval: number;
 
-const {dicePressed, refresh} = defineProps<{
+const {dicePressed} = defineProps<{
     dicePressed: Function
 }>()
 

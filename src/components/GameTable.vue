@@ -5,11 +5,31 @@ import {onMounted, ref, watch} from "vue";
 import BossCard from "@/components/BossCard.vue";
 import MedievalButton from "@/components/MedievalButton.vue";
 import GameModal from "@/components/GameModal.vue";
+import {Boss} from "@/types/Boss.ts";
+import cardArbitre from "@/assets/images/cards/arbitre.webp";
+import cardCatin from "@/assets/images/cards/catin.webp";
+import cardGambit from "@/assets/images/cards/gambit.webp";
+import cardJumeaux from "@/assets/images/cards/jumeaux.webp";
+import cardMain from "@/assets/images/cards/main.webp";
+import cardModere from "@/assets/images/cards/modere.webp";
+import cardPoulet from "@/assets/images/cards/poulet.webp";
+import cardShenbizkit from "@/assets/images/cards/shenbizkit.webp";
+
+const bossImages = {
+    "arbitre": cardArbitre,
+    "catin": cardCatin,
+    "gambit": cardGambit,
+    "jumeaux": cardJumeaux,
+    "main": cardMain,
+    "modere": cardModere,
+    "poulet": cardPoulet,
+    "Shenbizkit": cardShenbizkit
+}
 
 const props = defineProps<{
     gameMode: string
     nbPlayers: number,
-    goBack: Function
+    goBack: () => void
 }>()
 
 const bosses = ref<Boss[]>([]);
@@ -67,7 +87,7 @@ const initPantheon = (clonedBosses: Boss[]) => {
  * @param allBosses array of all bosses data
  * @param n Number of random bosses wanted
  */
-function getRandomBosses(allBosses, n) {
+function getRandomBosses(allBosses: Boss[], n: number) {
     let result = new Array(n),
         len = allBosses.length,
         taken = new Array(len);
@@ -85,7 +105,7 @@ function getRandomBosses(allBosses, n) {
  * Shuffles array in place. ES6 version
  * @param {Array} a items An array containing the items.
  */
-const shuffle = a => {
+const shuffle = (a: any[]) => {
     for (let i = a.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
         [a[i], a[j]] = [a[j], a[i]];
@@ -119,6 +139,7 @@ onMounted(() => {
 <template>
     <section class="boss-stack">
         <BossCard v-for="(boss, index) in bosses" :boss="boss" :key="boss.name" :dies="nextBoss"
+                  :image="bossImages[boss.name as keyof typeof bossImages]"
                   :style="{marginTop: `${index*20}px`, marginLeft: `${index*20}px`, zIndex: 20-index}"/>
     </section>
     <MedievalButton class="btn-exit" @click="props.goBack">Quitter</MedievalButton>
@@ -137,8 +158,7 @@ onMounted(() => {
 }
 
 .btn-exit {
-    //position: absolute;
-    //bottom: 1rem;
+//position: absolute; //bottom: 1rem;
 }
 
 </style>

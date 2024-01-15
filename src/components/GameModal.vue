@@ -3,7 +3,7 @@ import MedievalButton from "@/components/MedievalButton.vue";
 
 const { btnText, onExit } = defineProps<{
     btnText: string,
-    onExit: Function
+    onExit: () => void
 }>()
 </script>
 
