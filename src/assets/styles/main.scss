@@ -1,0 +1,23 @@
+@font-face {
+  font-family: 'EnchantedLand';
+  font-style: normal;
+  src: local('EnchantedLand'), url('@/assets/fonts/Enchanted-Land.otf') format('opentype');
+}
+@font-face {
+  font-family: 'Slowglass';
+  font-weight: bold;
+  font-style: italic;
+  src: local('Slowglass'), url('@/assets/fonts/Slowglass-Bold.otf') format('opentype');
+}
+@font-face {
+  font-family: 'MagicalSource';
+  src: local('MagicalSource'), url('@/assets/fonts/MagicalSource.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Cardinal';
+  src: local('Cardinal'), url('@/assets/fonts/Cardinal.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Dungeon';
+  src: local('Dungeon'), url('@/assets/fonts/Dungeon.ttf') format('truetype');
+}

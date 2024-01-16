@@ -6,8 +6,10 @@
     <button class="medieval-btn"><slot></slot></button>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
 .medieval-btn {
+    font-family: 'MagicalSource', serif;
+    font-size: 1rem;
     background-image: url("@/assets/images/button.webp");
     background-size: contain;
     background-repeat: no-repeat;

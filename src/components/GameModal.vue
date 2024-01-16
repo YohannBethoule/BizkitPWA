@@ -44,5 +44,6 @@ const { btnText, onExit } = defineProps<{
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     max-width: 500px; /* or any desired width */
     margin: 0 auto;
+    font-family: 'MagicalSource', serif;
 }
 </style>

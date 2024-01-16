@@ -57,6 +57,7 @@ watch(selectedPlayerCount, (newValue) => {
     justify-content: center;
     align-items: center;
     color: black;
+    line-height: 3rem;
 }
 
 .options-screen {
@@ -73,6 +74,8 @@ watch(selectedPlayerCount, (newValue) => {
 
 h1 {
     text-align: center;
+    font-family: 'EnchantedLand', serif;
+    font-size: 3rem;
 }
 
 .game-screen {
