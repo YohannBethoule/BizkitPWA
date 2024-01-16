@@ -43,21 +43,21 @@ watch(hp, (newHP) => {
 
 .hp {
     position: absolute;
-    top: 74%;
-    left: 11%;
-    font-size: 2rem;
+    top: calc(70vh * 0.735);
+    left: calc(100% * 0.105);
+    font-size: 4dvh;
     font-weight: 700;
     color: white;
-    width: 4rem;
+    width: 8dvh;
     height: 3rem;
     text-align: center;
 }
 
 .ap {
     position: absolute;
-    top: 52.8%;
-    left: 50.2%;
-    font-size: 1.2rem;
+    top: calc(50vh * 0.731);
+    left: calc(100% * 0.497);
+    font-size: 2.5dvh;
     font-weight: 400;
     color: white;
 }

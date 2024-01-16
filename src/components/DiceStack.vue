@@ -155,18 +155,14 @@ watch(rolling, (newRolling) => {
 <style lang="scss" scoped>
 .dice {
     position: absolute;
-}
-
-.dice {
-    position: absolute;
     background-color: transparent;
     border: none;
     outline: none;
     cursor: pointer;
     padding: 0;
-    margin-top: 1rem;
-    width: 3rem;
-    height: 3rem;
+    margin-top: 1dvh;
+    width: 6dvh;
+    height: 6dvh;
     opacity: 0.2;
     color: white;
     svg {
