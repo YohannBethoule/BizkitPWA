@@ -159,8 +159,4 @@ onMounted(() => {
     align-items: center;
 }
 
-.btn-exit {
-//position: absolute; //bottom: 1rem;
-}
-
 </style>

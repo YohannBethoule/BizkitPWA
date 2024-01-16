@@ -32,7 +32,7 @@ watch(hp, (newHP) => {
 .card {
     position: absolute;
     height: 70dvh;
-
+    font-family: 'EnchantedLand', serif;
     img {
         display: block;
         width: auto;
@@ -41,25 +41,28 @@ watch(hp, (newHP) => {
 
 }
 
-.hp {
+.ap, .hp {
     position: absolute;
-    top: calc(70dvh * 0.737);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.hp {
+    top: calc(70dvh * 0.728);
     left: calc(100% * 0.105);
     font-size: 4dvh;
-    font-weight: 700;
-    color: white;
     width: 8dvh;
-    height: 3rem;
-    text-align: center;
+    height: 8dvh;
 }
 
 .ap {
-    position: absolute;
-    top: calc(50dvh * 0.731);
-    left: calc(100% * 0.498);
-    font-size: 2.5dvh;
-    font-weight: 400;
-    color: white;
+    top: calc(70dvh * 0.525);
+    left: calc(100% * 0.47);
+    font-size: 3dvh;
+    width: 4dvh;
+    height: 4dvh;
 }
 
 .hp-btn {

@@ -27,11 +27,12 @@ const emit = defineEmits<{
     align-items: center;
     gap: 1rem;
     margin: 2rem 0;
+
 }
 
 label {
-    font-size: 1.5rem;
-
+    font-size: 2.5rem;
+    font-family: 'EnchantedLand', serif;
 }
 
 select {
@@ -41,8 +42,10 @@ select {
     border-radius: 8px;
     background-color: rgba(50,50,50,0.7);
     color: white;
-    font-size: 1.2rem;
+    font-size: 1.6rem;
     padding: 0 1rem;
     cursor: pointer;
+    font-family: 'EnchantedLand', serif;
+
 }
 </style>
