@@ -12,15 +12,18 @@
 </template>
 
 <style lang="scss" scoped>
+
 h1 {
     font-size: 4rem;
     font-weight: 700;
     margin-bottom: 2rem;
+    text-align: center;
 }
 h2 {
     font-size: 2rem;
     font-weight: 400;
     margin-bottom: 2rem;
+    text-align: center;
 }
 .links {
     display: flex;
