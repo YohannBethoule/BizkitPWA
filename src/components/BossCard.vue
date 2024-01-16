@@ -43,7 +43,7 @@ watch(hp, (newHP) => {
 
 .hp {
     position: absolute;
-    top: calc(70vh * 0.735);
+    top: calc(70dvh * 0.735);
     left: calc(100% * 0.105);
     font-size: 4dvh;
     font-weight: 700;
@@ -55,7 +55,7 @@ watch(hp, (newHP) => {
 
 .ap {
     position: absolute;
-    top: calc(50vh * 0.731);
+    top: calc(50dvh * 0.731);
     left: calc(100% * 0.497);
     font-size: 2.5dvh;
     font-weight: 400;
