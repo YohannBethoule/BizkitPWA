@@ -43,7 +43,7 @@ watch(hp, (newHP) => {
 
 .hp {
     position: absolute;
-    top: calc(70dvh * 0.735);
+    top: calc(70dvh * 0.737);
     left: calc(100% * 0.105);
     font-size: 4dvh;
     font-weight: 700;
@@ -56,7 +56,7 @@ watch(hp, (newHP) => {
 .ap {
     position: absolute;
     top: calc(50dvh * 0.731);
-    left: calc(100% * 0.497);
+    left: calc(100% * 0.498);
     font-size: 2.5dvh;
     font-weight: 400;
     color: white;
@@ -64,11 +64,11 @@ watch(hp, (newHP) => {
 
 .hp-btn {
     position: absolute;
-    width: 4rem;
-    height: 4rem;
+    width: 8dvh;
+    height: 8dvh;
     border: 0;
     background: transparent;
-    left: 12%;
+    left: 10%;
 
     &.increment {
         top: 64%;
