@@ -59,7 +59,9 @@ const initGame = () => {
 const adaptBossHp = (stack: Boss[]) => {
     for (let index in stack) {
         //Adapt bosses' HP depending on player count
-        if (props.nbPlayers === 2) {
+        if (props.nbPlayers === 1) {
+            stack[index].hp = 1;
+        } else if (props.nbPlayers === 2) {
             stack[index].hp = 10;
         } else {
             stack[index].hp += (props.nbPlayers - 3) * 5;
