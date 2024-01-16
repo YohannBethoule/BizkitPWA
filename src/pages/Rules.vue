@@ -140,7 +140,7 @@
                     la
                     face d’un dé.
                 </li>
-                <li>
+            </ul>
                     <p>Les règles de passation de la Catin et du Dindon sont les mêmes que celles du Gros Poulet. Le
                         Catin
                         et la Dindon le restent donc jusqu’à ce qu’un autre joueur prenne le rôle, et il n’est pas
@@ -151,7 +151,7 @@
                         foi. Ainsi, un Gros Poulet qui ferait un lancer 4 + 1 deviendrait la Catin et ne serait plus
                         Poulet,
                         il sera donc la Catin de personne jusqu’à ce qu’un nouveau Gros Poulet arrive en jeu.</p>
-                </li>
+            <ul class="additional-rules">
                 <li>
                     Enlever les limitations des rôles : possibilité de devenir triple, quadrupe, … Poulet/Catin/Dindon,
                     possibilité de cumuler les rôles
