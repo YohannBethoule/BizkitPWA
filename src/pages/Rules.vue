@@ -9,8 +9,9 @@
         <section>
             <h2>Les règles</h2>
             <p>Affrontez dans ce jeu les Seigneurs Ethyliques du Bizkit ! </p>
-            <p>Chaque Seigneur possède un nombre de points de Vie (V) inscrit en haut à droite de sa carte,
-                et un nombre de oints d'Attaque (A) inscrit en bas à gauche de sa carte. </p>
+            <p>Chaque Seigneur possède un nombre de Points de Vie (PV) inscrits en bas à gauche de sa carte,
+                et un nombre de Points d'Attaque (PA) inscrits dans le cercle rouge au milieu de sa carte. </p>
+            <p>Un seigneur est un joueur comme un autre qui doit avoir sa place autour de la table, entre deux autres vrais joueurs.</p>
             <p>Sauf contre-indication, tous les Seigneurs sont régis par les mêmes règles : </p>
             <ul>
                 <li>Un seigneur perd 1 PV à chaque bizkit</li>
