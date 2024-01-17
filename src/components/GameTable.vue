@@ -127,6 +127,12 @@ const endGame = () => {
     }
 }
 
+const exit = () => {
+    if (confirm("Voulez-vous vraiment quitter la partie ?")) {
+        props.goBack();
+    }
+}
+
 watch(bosses, (newBosses) => {
     if (newBosses.length === 0) {
         endGame();
@@ -144,7 +150,7 @@ onMounted(() => {
                   :image="bossImages[boss.name as keyof typeof bossImages]"
                   :style="{marginTop: `${index*20}px`, marginLeft: `${index*20}px`, zIndex: 20-index}"/>
     </section>
-    <MedievalButton class="btn-exit" @click="props.goBack">Quitter</MedievalButton>
+    <MedievalButton class="btn-exit" @click="exit">Quitter</MedievalButton>
     <GameModal v-if="isVictory" btn-text="Retour" :on-exit="props.goBack">Félicitations, vous avez gagné !</GameModal>
 </template>
 
