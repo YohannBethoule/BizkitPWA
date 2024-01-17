@@ -93,7 +93,7 @@ const rollDices = () => {
     dicesSum.value = dices.value.map((item) => item.value).reduce((previousState, currentState) => previousState + currentState);
 }
 
-let interval: number;
+let interval: any;
 
 const {dicePressed} = defineProps<{
     dicePressed: Function
