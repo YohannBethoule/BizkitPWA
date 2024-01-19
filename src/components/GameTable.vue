@@ -146,7 +146,7 @@ onMounted(() => {
 
 <template>
     <section class="boss-stack">
-        <BossCard v-for="(boss, index) in bosses" :boss="boss" :key="boss.name" :dies="nextBoss"
+        <BossCard v-for="(boss, index) in bosses.slice(0,3)" :boss="boss" :key="boss.name" :dies="nextBoss"
                   :image="bossImages[boss.name as keyof typeof bossImages]"
                   :style="{marginTop: `${index*20}px`, marginLeft: `${index*20}px`, zIndex: 20-index}"/>
     </section>
