@@ -2,20 +2,6 @@ import { Boss } from '@/types/Boss.ts'
 
 export const allBosses: Boss[] = [
     {
-        "name": "arbitre",
-        "surname": "",
-        "hp": 20,
-        "ap": 1,
-        "imageSource": '../assets/images/cards/arbitre.webp'
-    },
-    {
-        "name": "modere",
-        "surname": "",
-        "hp": 30,
-        "ap": 2,
-        "imageSource": '../assets/images/cards/modere.webp'
-    },
-    {
         "name": "jumeaux",
         "surname": "",
         "hp": 25,
@@ -30,6 +16,13 @@ export const allBosses: Boss[] = [
         "imageSource": '../assets/images/cards/main.webp'
     },
     {
+        "name": "envouteuse",
+        "surname": "",
+        "hp": 25,
+        "ap": "X",
+        "imageSource": '../assets/images/cards/envouteuse.webp'
+    },
+    {
         "name": "poulet",
         "surname": "",
         "hp": 21,
@@ -37,12 +30,18 @@ export const allBosses: Boss[] = [
         "imageSource": '../assets/images/cards/poulet.webp'
     },
     {
-        "name": "catin",
+        "name": "arbitre",
         "surname": "",
-        "hp": 41,
+        "hp": 20,
+        "ap": 1,
+        "imageSource": '../assets/images/cards/arbitre.webp'
+    },
+    {
+        "name": "modere",
+        "surname": "",
+        "hp": 30,
         "ap": 2,
-        "passive": "La catin perd 1 PV chaque fois que le poulet boit",
-        "imageSource": '../assets/images/cards/catin.webp'
+        "imageSource": '../assets/images/cards/modere.webp'
     },
     {
         "name": "gambit",
@@ -50,6 +49,28 @@ export const allBosses: Boss[] = [
         "hp": 25,
         "ap": 2,
         "imageSource": '../assets/images/cards/gambit.webp'
+    },
+    {
+        "name": "catin",
+        "surname": "",
+        "hp": 41,
+        "ap": 1,
+        "passive": "La catin perd 1 PV chaque fois que le poulet boit",
+        "imageSource": '../assets/images/cards/catin.webp'
+    },
+    {
+        "name": "aquarius",
+        "surname": "",
+        "hp": 10,
+        "ap": 2,
+        "imageSource": '../assets/images/cards/aquarius.webp'
+    },
+    {
+        "name": "runomancien",
+        "surname": "",
+        "hp": 25,
+        "ap": 2,
+        "imageSource": '../assets/images/cards/runomancien.webp'
     },
     {
         "name": "Shenbizkit",
