@@ -3,6 +3,6 @@ export interface Boss {
     surname: string;
     passive?: string;
     hp: number;
-    ap: number;
+    ap: number|string;
     imageSource: string;
 }

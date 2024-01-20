@@ -50,7 +50,7 @@ watch(hp, (newHP) => {
 }
 
 .hp {
-    top: calc(70dvh * 0.728);
+    top: calc(70dvh * 0.725);
     left: calc(100% * 0.105);
     font-size: 4dvh;
     width: 8dvh;

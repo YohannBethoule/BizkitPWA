@@ -14,6 +14,9 @@ import cardMain from "@/assets/images/cards/main.webp";
 import cardModere from "@/assets/images/cards/modere.webp";
 import cardPoulet from "@/assets/images/cards/poulet.webp";
 import cardShenbizkit from "@/assets/images/cards/shenbizkit.webp";
+import cardEnvouteuse from "@/assets/images/cards/envouteuse.webp";
+import cardAquarius from "@/assets/images/cards/aquarius.webp";
+import cardRunomancien from "@/assets/images/cards/runomancien.webp";
 
 const bossImages = {
     "arbitre": cardArbitre,
@@ -23,8 +26,13 @@ const bossImages = {
     "main": cardMain,
     "modere": cardModere,
     "poulet": cardPoulet,
+    "aquarius": cardAquarius,
+    "runomancien": cardRunomancien,
+    "envouteuse": cardEnvouteuse,
     "Shenbizkit": cardShenbizkit
 }
+
+const bossesWithConstantHP = ["Shenbizkit", "catin", "aquarius"];
 
 const props = defineProps<{
     gameMode: string
@@ -58,10 +66,15 @@ const initGame = () => {
 
 const adaptBossHp = (stack: Boss[]) => {
     for (let index in stack) {
-        //Adapt bosses' HP depending on player count
         if (props.nbPlayers === 1) {
             stack[index].hp = 1;
-        } else if (props.nbPlayers === 2) {
+            continue;
+        }
+        if (bossesWithConstantHP.includes(stack[index].name)) {
+            continue;
+        }
+        //Adapt bosses' HP depending on player count
+        if (props.nbPlayers === 2) {
             stack[index].hp = 10;
         } else {
             stack[index].hp += (props.nbPlayers - 3) * 5;
