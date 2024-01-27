@@ -7,6 +7,12 @@ import GameTable from "@/components/GameTable.vue";
 
 const startGame = () => {
     gameStarted.value = true;
+    if (typeof window.trackCustomEvent === 'function') {
+        window.trackCustomEvent("game started", {
+            gameMode: selectedGameMode.value,
+            nbPlayers: selectedPlayerCount.value
+        })
+    }
 }
 
 const endGame = () => {

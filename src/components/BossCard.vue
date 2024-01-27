@@ -12,6 +12,11 @@ const hp = ref(boss.hp)
 
 watch(hp, (newHP) => {
     if (newHP <= 0) {
+        if (typeof window.trackCustomEvent === 'function') {
+            window.trackCustomEvent("boss defeated", {
+                boss: boss.name,
+            })
+        }
         dies();
     }
 });
