@@ -2,6 +2,10 @@
 import {ref, watch} from "vue";
 import DiceStack from "@/components/DiceStack.vue";
 import {Boss} from "@/types/Boss.ts";
+import { useUmami } from "@/composables/useUmami.ts";
+
+const {track} = useUmami();
+
 const { boss, dies } = defineProps<{
     boss: Boss,
     dies: Function,
@@ -12,11 +16,9 @@ const hp = ref(boss.hp)
 
 watch(hp, (newHP) => {
     if (newHP <= 0) {
-        if (typeof window.trackCustomEvent === 'function') {
-            window.trackCustomEvent("boss defeated", {
-                boss: boss.name,
-            })
-        }
+        track('boss-defeat', {
+            boss: boss.name,
+        })
         dies();
     }
 });

@@ -4,15 +4,16 @@ import CustomSelect from "@/components/CustomSelect.vue";
 import {GameModes} from "@/types/GameMode.ts";
 import {ref, watch} from "vue";
 import GameTable from "@/components/GameTable.vue";
+import { useUmami } from "@/composables/useUmami.ts";
+
+const {track} = useUmami();
 
 const startGame = () => {
     gameStarted.value = true;
-    if (typeof window.trackCustomEvent === 'function') {
-        window.trackCustomEvent("game started", {
-            gameMode: selectedGameMode.value,
-            nbPlayers: selectedPlayerCount.value
-        })
-    }
+    track('start-game', {
+        gameMode: selectedGameMode.value,
+        nbPlayers: selectedPlayerCount.value,
+    })
 }
 
 const endGame = () => {
